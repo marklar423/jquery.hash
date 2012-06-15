@@ -1,7 +1,7 @@
 jquery.hash
 ===========
 
-This plugin allows you to get/set the hash values.
+This plugin allows you to get/set hash values.
 
 Examples:
 
