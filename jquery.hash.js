@@ -51,15 +51,17 @@
             }
         };
 
-        if (value === undefined) {
-            //get
-            return methods.getHash()[key];
-        }
-        else {
-            //set
-            var obj = methods.getHash();
-            obj[key] = value;
-            methods.setHash(obj);            
+        if (key != null) {
+            if (value === undefined) {
+                //get
+                return methods.getHash()[key];
+            }
+            else {
+                //set
+                var obj = (window.location.hash == '') ? {} : methods.getHash();
+                obj[key] = value;
+                methods.setHash(obj);
+            }
         }
     }
 })(jQuery);
